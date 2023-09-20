@@ -24,6 +24,8 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 
 //! Routes
 app.use('/', require('./routes/root'));
+app.use('/register', require('./routes/register'));
+app.use('/login', require('./routes/login'));
 app.use('/employees', require('./routes/api/employees'));
 
 // // '^/$|/index.html' starts and ends with / OR equals /index.html
