@@ -1,5 +1,8 @@
 const data = {
   employees: require('../model/employees.json'),
+  setEmployees: function (data) {
+    this.employees = data;
+  },
 };
 
 const getAllEmployees = (req, res) => {
@@ -23,7 +26,7 @@ const addEmployee = (req, res) => {
     lastname: req.body.lastname,
   };
 
-  data.employees = [...data.employees, newEmployee];
+  data.setEmployees([...data.employees, newEmployee]);
   res.status(201).json(data.employees);
 };
 
@@ -48,7 +51,7 @@ const updateEmployee = (req, res) => {
     a.id > b.id ? 1 : a.id < b.id ? -1 : 0
   );
 
-  data.employees = [...sortedArray];
+  data.setEmployees([...sortedArray]);
 
   res.status(200).json(data.employees);
 };
@@ -64,7 +67,7 @@ const deleteEmployee = (req, res) => {
   }
 
   const filteredArray = data.employees.filter((emp) => emp.id !== id);
-  data.employees = [...filteredArray];
+  data.setEmployees([...filteredArray]);
   res.json(data.employees);
 };
 
