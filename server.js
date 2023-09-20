@@ -5,6 +5,7 @@ const cors = require('cors');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const corsOptions = require('./config/corsOptions');
+const verifyJWT = require('./middleware/verifyJWT');
 
 const PORT = process.env.PORT || 3000;
 
@@ -26,6 +27,8 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
 app.use('/login', require('./routes/login'));
+
+app.use(verifyJWT); //! All routes below will need valid authentication
 app.use('/employees', require('./routes/api/employees'));
 
 // // '^/$|/index.html' starts and ends with / OR equals /index.html
