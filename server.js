@@ -4,6 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
+const credentials = require('./middleware/credentials');
 const corsOptions = require('./config/corsOptions');
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
@@ -15,6 +16,9 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 // Custom middleware
 app.use(logger);
+
+// Handle options credentials check before CORS and fetch credentials requirements
+app.use(credentials);
 
 // Cross Origin Resource Sharing
 app.use(cors(corsOptions));
@@ -34,6 +38,7 @@ app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
 app.use('/login', require('./routes/login'));
 app.use('/refresh', require('./routes/refresh'));
+app.use('/logout', require('./routes/logout'));
 
 app.use(verifyJWT); //! All routes below will need valid authentication
 app.use('/employees', require('./routes/api/employees'));

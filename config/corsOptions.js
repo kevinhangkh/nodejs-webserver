@@ -1,11 +1,8 @@
-const whitelist = [
-  'https://www.mysite.com',
-  'http://127.0.0.1:3000', // TODO Remove after dev is done
-  'http://localhost:3000', // TODO Remove after dev is done
-];
+const allowedOrigins = require("./allowedOrigins");
+
 const corsOptions = {
   origin: (origin, callback) => {
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
       // TODO Remove !origin after dev is done
       callback(null, true);
     } else {
