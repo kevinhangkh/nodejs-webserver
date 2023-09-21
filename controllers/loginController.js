@@ -29,11 +29,19 @@ const handleLogin = async (req, res) => {
     if (!match) {
       return res.sendStatus(401); // Unauthorized
     }
+
+    // Get the roles
+    const roles = Object.values(foundUser.roles);
     // Create JWTs
     const accessToken = jwt.sign(
-      { username: foundUser.username },
+      {
+        UserInfo: {
+          username: foundUser.username,
+          roles,
+        },
+      },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: '30s' }
+      { expiresIn: process.env.ACCESS_TOKEN_EXPIRATION }
     );
     const refreshToken = jwt.sign(
       { username: foundUser.username },

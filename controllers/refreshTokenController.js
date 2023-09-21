@@ -29,11 +29,18 @@ const handleRefreshToken = (req, res) => {
       return res.sendStatus(403);
     }
 
+    // Get the roles
+    const roles = Object.values(foundUser.roles);
     // Create JWTs
     const accessToken = jwt.sign(
-      { username: foundUser.username },
+      {
+        UserInfo: {
+          username: decoded.username,
+          roles,
+        },
+      },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: '30s' }
+      { expiresIn: process.env.ACCESS_TOKEN_EXPIRATION }
     );
     res.json({ accessToken });
   });
