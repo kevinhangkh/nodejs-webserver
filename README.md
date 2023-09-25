@@ -1,6 +1,6 @@
 # nodejs-webserver
 
-This is a backend application written in NodeJS.
+This is a backend application written in NodeJS with a connection with MongoDB.
 
 The authentication is done with Json Web Tokens using accessToken and refreshToken.
 
@@ -18,6 +18,17 @@ It provides the following endpoints:
 - `PUT /employees`
 - `DELET /employees`
 - `GET /employees/:id`
+
+## Run
+
+You will need to create a `.env` file in the root directory of the project and add the following:
+
+- `ACCESS_TOKEN_SECRET`
+- `REFRESH_TOKEN_SECRET`
+- `ACCESS_TOKEN_EXPIRATION`
+- `DATABASE_URI`
+
+Reach out to me for the values
 
 Run `npm run dev` or `bun run dev` to start the app in dev mode.
 
