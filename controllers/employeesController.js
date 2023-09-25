@@ -72,7 +72,7 @@ const deleteEmployee = async (req, res) => {
         .json({ message: `Employee with id: ${id} not found` });
     }
 
-    const result = await Employee.deleteOne({ _id: id });
+    const result = await employee.deleteOne({ _id: id }); //! employee with lower case
     res.json(result);
   } catch (error) {
     console.log(error);
@@ -83,7 +83,7 @@ const getEmployeeById = async (req, res) => {
   const { id } = req?.params;
   if (!id) return res.status(400).json({ message: 'Employee id is required' });
 
-  try {
+  try { 
     const employee = await Employee.findOne({ _id: id }).exec();
     if (!employee) {
       return res
