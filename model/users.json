@@ -1,0 +1,61 @@
+[
+  {
+    "username": "admin2",
+    "password": "$2a$10$vm0bwbd8Wi5AluYTvSQ9gurwj08ne2nxf8FI98goE09A0W9qn.Yom",
+    "roles": {
+      "Admin": "ROLE_ADMIN",
+      "Editor": "ROLE_EDITOR",
+      "User": "ROLE_USER"
+    }
+  },
+  {
+    "username": "admin3",
+    "password": "$2a$10$hCtzVLCABJt5G4E2Zh30POFWc/m5DqnV4C0nNlfWUFAj3F/x3S.MW",
+    "roles": {
+      "Admin": "ROLE_ADMIN",
+      "Editor": "ROLE_EDITOR",
+      "User": "ROLE_USER"
+    }
+  },
+  {
+    "username": "admin5",
+    "password": "$2a$10$NGRZuIbKEm6UY5Pxot60GuudQYxAdudbcno95lB1b2R7JvgAiSCx2",
+    "roles": {
+      "Admin": "ROLE_ADMIN",
+      "Editor": "ROLE_EDITOR",
+      "User": "ROLE_USER"
+    }
+  },
+  {
+    "username": "admin4",
+    "password": "$2a$10$V26gHe.fVE8xR.8MD3DAP.ng/yIN5eJKi.QzY7ZMi0sDXW.SVq1gG",
+    "roles": {
+      "Admin": "ROLE_ADMIN",
+      "Editor": "ROLE_EDITOR",
+      "User": "ROLE_USER"
+    },
+    "refreshToken": ""
+  },
+  {
+    "username": "admin",
+    "password": "$2a$10$e/4y5blO40BmdubEdbxQgeWo.0bQMT.ZdMosHfUQVQQWAM1KMRt7C",
+    "roles": {
+      "Admin": "ROLE_ADMIN",
+      "Editor": "ROLE_EDITOR",
+      "User": "ROLE_USER"
+    },
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjk1MzAzMDEyLCJleHAiOjE2OTUzODk0MTJ9.BH4Kr_wvBg-cGLOL9Ly0ZKh7PuBYJs5kCNl3x5oUcB8"
+  },
+  {
+    "username": "kev2",
+    "password": "$2a$10$5voS8U7tWHGBjUWpbYlCcOWD5A7G2RPWExh4jaT5Y7iKJHwm4zjUi",
+    "roles": { "Editor": "ROLE_EDITOR", "User": "ROLE_USER" },
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtldjIiLCJpYXQiOjE2OTUzMDMxMDksImV4cCI6MTY5NTM4OTUwOX0.yZJOCc94-v8ksUjx4lHCGagdSSbL_b6deA4huJuzbYs"
+  },
+  {
+    "username": "kev",
+    "password": "$2a$10$CsssoCG9nnxEWmsB.gi4cePIlwYmZGRUygC2LcOEkLxf9H/fqNlvS",
+    "roles": { "User": "ROLE_USER" },
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtldiIsImlhdCI6MTY5NTMwMzMzNSwiZXhwIjoxNjk1Mzg5NzM1fQ.RWhqDTv-eoQy3o2vgtqltGbP99ggYNue6mk-2CgZBGc"
+  }
+]
